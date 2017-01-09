@@ -11,6 +11,12 @@ require_once 'connect.php';?>
 <body>
     
 <?php 
+    
+if(!isset($_SESSION['user_id'])) {
+    session_destroy();
+    header('Location: index.php');
+}    
+
 // Fetch All The Users Info & Save As Variables
 // Save This As A Function Later
 $user_info = "SELECT first_name, last_name, email FROM users WHERE user_id='" . $_SESSION['user_id'] . "'";
@@ -25,6 +31,8 @@ $email = $row['email'];
     
 
 <h1>Your Logged In <?php echo $first_name . " " . $last_name ?>!</h1>
+    
+<a href="logout.php"><button>Logout</button></a>
     
   
     
