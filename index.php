@@ -23,8 +23,8 @@
 <span id='login_message'></span>
     
 <form id='login_form' method='post' action='login.php'>
-    Email: <input type='text' name='email' maxlength='60' required='required'><br>
-    Password: <input type='password' name='password' maxlength='60' required='required'><br>
+    Email: <input id='login_email' type='text' name='email' maxlength='60' required='required'><br>
+    Password: <input id='login_pass' type='password' name='password' maxlength='60' required='required'><br>
     <input type='submit' name='login' value='Log In'>
 </form>
     

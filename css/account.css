@@ -1,0 +1,7 @@
+div#profile_wrap {
+    width: 200px;
+    height: 200px;
+    background-image: url('../images/1/profile.jpg');
+    background-size: cover;
+    background-position: center;
+}

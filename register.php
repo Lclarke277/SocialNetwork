@@ -23,6 +23,9 @@ $last_name = formatName($_POST['last_name']);
 $email = strtolower($_POST['email']);
 $password = hash('ripemd128', $salt . $_POST['password'] . $pepper);
 
+// Save raw password for later 
+$password_raw = $_POST['password'];
+
 // Check If Email Is Valid
 if(filter_var($email, FILTER_VALIDATE_EMAIL))  {
     
@@ -47,12 +50,16 @@ _END;
         $stmt = $conn->prepare('INSERT INTO users (first_name, last_name, email, password)VALUES(?, ?, ?, ?)');
         $stmt->bind_param('ssss', $first_name, $last_name, $email, $password);
         $stmt->execute();
+        
+        // Append Message
+        // Add Email & Pass To Login Fields After Register
         echo <<<_END
-
         <script>
         var message = $('#register_message');
         message.show().html('You are registered $first_name, welcome.');
         message.delay(2000).fadeOut(1000);
+        $('#login_email').val('$email');
+        $('#login_pass').val('$password_raw');
         </script>    
 
 _END;
