@@ -5,7 +5,7 @@ require_once 'connect.php';
 $salt = '$kl._';
 $pepper = 'l*&s';
 
-$email = $_POST['email'];
+$email = strtolower($_POST['email']);
 $password = hash('ripemd128', $salt . $_POST['password'] . $pepper);
 
 
@@ -20,19 +20,23 @@ $stmt->fetch();
 $num_of_rows = $stmt->num_rows;
 $stmt->close();
 
-/*
-echo $email . "<br>";
-echo $password . "<br";
-echo $num_of_rows;
-*/
-
 // The User Exists
 if($num_of_rows > 0) {
-    header("Location: account.php");
+    echo "1";
+    session_start();
+    $_SESSION['user_id'] = $user_id; 
     
 // If The User Doesnt Exists
 } else {
-    header("Location: http://www.reddit.com");
+        echo <<<_END
+
+        <script>
+        var message = $('#login_message');
+        message.show().html('Invalid Login');
+        message.delay(2000).fadeOut(1000);
+        </script>    
+
+_END;
 }
 
 ?>

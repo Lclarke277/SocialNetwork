@@ -1,4 +1,8 @@
-<!-- Function for the register form on index.php -->
+<!-- Function for the register form on index.php 
+
+    Checks if email is a valid email address
+    Checks if email is already in the database 
+    Alerts user -->
 
 <?php 
 require_once 'connect.php';

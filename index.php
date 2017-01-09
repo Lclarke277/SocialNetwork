@@ -4,6 +4,7 @@
 <title>Social Media</title>
 <script src="jquery-3.1.1.min.js"></script> 
 <script src="register.js"></script>
+<script src="login.js"></script>
 </head>
 <body>
 
@@ -20,6 +21,7 @@
     <br>
 
 <span id='login_message'></span>
+    
 <form id='login_form' method='post' action='login.php'>
     Email: <input type='text' name='email' maxlength='60' required='required'><br>
     Password: <input type='password' name='password' maxlength='60' required='required'><br>
