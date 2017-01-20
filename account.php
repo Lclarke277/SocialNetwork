@@ -8,8 +8,8 @@ require_once 'connect.php';
 <head>
 <title>Account</title>
 <script src="jquery-3.1.1.min.js"></script> 
-<script src='post.js'></script>
-<link rel="stylesheet" type="text/css" href="css/account.css"> 
+<script src="post.js"></script>
+<link rel="stylesheet" type="text/css" href="css/account.css">
 </head>
 <body>
     
@@ -70,6 +70,7 @@ if(isset($_FILES['image'])){
 <div id='profile_wrap' style="background-image: url('images/<?php echo $_SESSION['user_id'] ?>/profile.jpg')">
  </div>   
     
+<!-- Image Upload Form -->
 <form action="" method="POST" enctype="multipart/form-data">
     <input type="file" name="image" />
     <input type="submit"/>
@@ -85,7 +86,11 @@ if(isset($_FILES['image'])){
         <input type='submit' name='post' value='Post'>
     </form>
     
-    <div id='post_area'></div>
+    <div id='post_area'>
+    
+    <?php require_once 'recieve_post.php' ?>
+    
+    </div>
     
 </div><!-- Right -->  
 </div><!-- Wrap -->    

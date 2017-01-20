@@ -14,12 +14,11 @@ $(function() {
             success: function(data) {
                 
                 // display the error message
-                 jQuery(data).appendTo("#post_area");   
+                $("#post_area").load(location.href + " #post_area");
+                // jQuery(data).appendTo("#post_area");   
             }
          });
         // Clear the form fields after submit
         $("#post_form").trigger("reset");
     });
 }); 
-
-document.getElementById('profile_wrap').style.backgroundImage = "images/" . $_SESSION['user_id'] . "/profile.jpg"
