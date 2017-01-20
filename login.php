@@ -1,5 +1,6 @@
 <?php
 require_once 'connect.php';
+session_start();
 
 // Salt for Hasing Password
 $salt = '$kl._';
@@ -23,7 +24,6 @@ $stmt->close();
 // The User Exists
 if($num_of_rows > 0) {
     echo "1";
-    session_start();
     $_SESSION['user_id'] = $user_id; 
     
 // If The User Doesnt Exists

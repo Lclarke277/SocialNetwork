@@ -1,7 +1,44 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+div#wrap {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+    background-color: RGBa(200, 200, 200, 1);
+    height: 100vh;
+}
+
+div#header {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: RGBa(0, 0, 0, 0.5);
+    height: 70px;
+}
+
+div#left {
+    float:left;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    min-height: 95%;
+    background-color: RGBa(0, 0, 0, 0.3);
+}
+
+div#right {
+    float:left;
+    width: 700px;
+}
+
 div#profile_wrap {
     width: 200px;
     height: 200px;
-    background-image: url('../images/1/profile.jpg');
+    margin: 0 auto;
+    position:inherit;
+    background-image: url('../images/profile.jpg');
     background-size: cover;
     background-position: center;
 }

@@ -1,12 +1,14 @@
+<?php 
+session_start(); 
+require_once 'connect.php';
+?>
+
 <!DOCTYPE HTML>
-
-<?php session_start(); 
-require_once 'connect.php';?>
-
 <html>
 <head>
 <title>Account</title>
 <script src="jquery-3.1.1.min.js"></script> 
+<script src='post.js'></script>
 <link rel="stylesheet" type="text/css" href="css/account.css"> 
 </head>
 <body>
@@ -28,46 +30,42 @@ $row = mysqli_fetch_array($query);
 $first_name = $row['first_name'];
 $last_name = $row['last_name'];
 $email = $row['email']; 
+
+/*
+For new profiles, create the accounts image directory,
+then copy the default profile image to the folder 
+*/
+if(!is_dir("images/". $_SESSION['user_id'] . "/")) {
+    mkdir("images/". $_SESSION['user_id'] . "/");
+    copy("images/profile.jpg", "images/". $_SESSION['user_id'] . "/profile.jpg");
+}
+    
 ?>
 
 
 <?php // File Upload 
 if(isset($_FILES['image'])){
-      $errors = array();
-      $file_name = $_FILES['image']['name'];
-      $file_size = $_FILES['image']['size'];
-      $file_tmp = $_FILES['image']['tmp_name'];
-      $file_type= $_FILES['image']['type'];
-      $file_ext = pathinfo($_FILES['image']['name'])['extension'];
+    $errors = array();
+    $file_name = $_FILES['image']['name'];
+    $file_size = $_FILES['image']['size'];
+    $file_tmp = $_FILES['image']['tmp_name'];
+    $file_type= $_FILES['image']['type'];
+    $file_ext = pathinfo($_FILES['image']['name'])['extension'];
       
-      $expensions= array("jpeg","jpg","png");
-      
-      if(in_array($file_ext,$expensions)=== false){
-         $errors[]="extension not allowed, please choose a JPEG or PNG file.";
-      }
-      
-      if($file_size > 2097152){
-         $errors[]='File size must be excately 2 MB';
-      }
-      
-      if(empty($errors)==true){
-         // If No Errors, Make The Dir and Upload File 
-         if(!is_dir("images/". $_SESSION['user_id'] . "/")) {
-             mkdir("images/". $_SESSION['user_id'] . "/"); 
-         };
-          
-         // Storing Profile Pic In images/(user_id)/profile.jpg  
-         move_uploaded_file($file_tmp,"images/". $_SESSION['user_id'] . "/profile.jpg");
-         echo "Success";
-      }else{
-         print_r($errors);
-      }
+    $expensions= array("jpeg","jpg","png");
+    
+    move_uploaded_file($file_tmp,"images/". $_SESSION['user_id'] . "/profile.jpg");
    }    
 ?>
-    
 
+<div id='wrap'>
+
+<div id='header'>
 <h1>Your Logged In <?php echo $first_name . " " . $last_name ?>!</h1>
-
+</div><!-- Header -->
+    
+<div id='left'>
+    
 <!-- Profile Picture -->
 <div id='profile_wrap' style="background-image: url('images/<?php echo $_SESSION['user_id'] ?>/profile.jpg')">
  </div>   
@@ -78,8 +76,18 @@ if(isset($_FILES['image'])){
  </form>    
     
 <a href="logout.php"><button>Logout</button></a>
+</div><!-- Left -->  
     
-  
+<div id='right'>
     
+    <form id='post_form' action="post.php" method="POST">
+        <input type='text' name='input' placeholder='whats on your mind?'>
+        <input type='submit' name='post' value='Post'>
+    </form>
+    
+    <div id='post_area'></div>
+    
+</div><!-- Right -->  
+</div><!-- Wrap -->    
 </body>         
 </html>
