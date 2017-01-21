@@ -62,6 +62,13 @@ if(isset($_FILES['image'])){
 
 <div id='header'>
 <h1>Your Logged In <?php echo $first_name . " " . $last_name ?>!</h1>
+    
+    
+<!-- Search Other Users -->
+<form id='user_search_form' action="search_users.php" method="post">
+    <input type='text' name='user_search' placeholder="Search Users">
+    <input type='submit' name='user_search_submit' value='Search'>
+</form>
 </div><!-- Header -->
     
 <div id='left'>
@@ -81,7 +88,8 @@ if(isset($_FILES['image'])){
     
 <div id='right'>
     
-    <form id='post_form' action="post.php" method="POST">
+    <!-- Status Posting Form -->
+    <form id='post_form' action="post.php" method="post">
         <input type='text' name='input' placeholder='whats on your mind?'>
         <input type='submit' name='post' value='Post'>
     </form>
