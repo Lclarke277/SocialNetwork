@@ -9,6 +9,7 @@ require_once 'connect.php';
 <title>Account</title>
 <script src="jquery-3.1.1.min.js"></script> 
 <script src="post.js"></script>
+<script src="search_users.js"></script>
 <link rel="stylesheet" type="text/css" href="css/account.css">
 </head>
 <body>
@@ -93,6 +94,8 @@ if(isset($_FILES['image'])){
         <input type='text' name='input' placeholder='whats on your mind?'>
         <input type='submit' name='post' value='Post'>
     </form>
+    
+    <div id='search_area'></div>
     
     <div id='post_area'>
     
