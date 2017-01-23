@@ -22,7 +22,7 @@ $(function() {
                     
                 // display the error message
                 } else {
-                 jQuery(data).appendTo("#register_message");   
+                 jQuery(data).appendTo("#error_message");   
                 }
                 
             }

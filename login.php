@@ -31,7 +31,7 @@ if($num_of_rows > 0) {
         echo <<<_END
 
         <script>
-        var message = $('#register_message');
+        var message = $('#error_message');
         message.show().html('Invalid Login');
         message.delay(3000).fadeOut(1500);
         </script>    

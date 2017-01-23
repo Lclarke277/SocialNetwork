@@ -16,8 +16,6 @@
 
         <img id='logo' src="images/site/logo.png">
 
-        <span id='login_message'></span>
-
         <form id='login_form' method='post' action='login.php'>
             <input id='login_email' type='text' name='email' maxlength='60' required='required' placeholder="Email">
             <input id='login_pass' type='password' name='password' maxlength='60' required='required' placeholder="Password">
@@ -27,7 +25,8 @@
 
         <div id='main_body'>
 
-            <span id='register_message' class='hidden'></span>    
+            <span id='error_message' class='hidden'></span>
+            <span id='success_message' class='hidden'></span> 
 
             <div id='register_wrap'>
 

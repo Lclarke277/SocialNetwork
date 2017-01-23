@@ -23,6 +23,7 @@ body, html {
     position: absolute;
     float: left;
     margin-top: -7px;
+    margin-left: 20px;
 }
 
 #login_form {
@@ -43,6 +44,7 @@ body, html {
 }
 
 input[type=text], input[type=password] {
+    margin-right: 5px;
     padding: 3px 5px;
     border-radius: 0px;
     border: none;
@@ -96,21 +98,28 @@ input#register_submit {
     padding: 3px 5px;
 }
 
-#register_message, #login_message {
+#success_message, #error_message {
     padding: 10px 0px;
     width: 300px;
     position: absolute;
-    top: 75px;
+    top: 60px;
     left: 50%;
     margin-left: -160px;
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     text-align: center;
     color: white;
-    background-color: #9400EA;
     -webkit-box-shadow: 0 10px 6px -6px #777;
     -moz-box-shadow: 0 10px 6px -6px #777;
     box-shadow: 0 10px 6px -6px #777;
+}
+
+#success_message {
+    background-color: green; /* #9400EA; */
+}
+
+#error_message {
+    background-color: red; /* #9400EA; */
 }
 
 #register_wrap {
@@ -118,9 +127,9 @@ input#register_submit {
     background-color: #9400EA;
     position: absolute;
     left: 50%;
-    margin-left: -200px;
+    margin-left: -250px;
     top: 150px;
-    padding: 20px 50px;
+    padding: 20px 100px;
     /* Box Shadow */
     -webkit-box-shadow: 0 10px 6px -6px #777;
     -moz-box-shadow: 0 10px 6px -6px #777;
