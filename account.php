@@ -11,6 +11,7 @@ require_once 'connect.php';
 <script src="post.js"></script>
 <script src="search_users.js"></script>
 <link rel="stylesheet" type="text/css" href="css/account.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
     
@@ -76,7 +77,9 @@ if(isset($_FILES['image'])){
     
 <!-- Profile Picture -->
 <div id='profile_wrap' style="background-image: url('images/<?php echo $_SESSION['user_id'] ?>/profile.jpg')">
- </div>   
+ </div> 
+    
+
     
 <!-- Image Upload Form -->
 <form action="" method="POST" enctype="multipart/form-data">
@@ -88,13 +91,16 @@ if(isset($_FILES['image'])){
 </div><!-- Left -->  
     
 <div id='right'>
-    
+   
+<div class='post'>
     <!-- Status Posting Form -->
     <form id='post_form' action="post.php" method="post">
         <input type='text' name='input' placeholder='whats on your mind?'>
         <input type='submit' name='post' value='Post'>
     </form>
+</div>  
     
+    <!-- Put search results in here -->
     <div id='search_area'></div>
     
     <div id='post_area'>

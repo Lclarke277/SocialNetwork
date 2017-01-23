@@ -17,7 +17,8 @@ $receive_stmt->store_result();
 $receive_stmt->bind_result($post_id, $user_posting_id, $input, $date_stamp, $time_stamp);
 
 while($receive_stmt->fetch()) {
-    echo "<p>" . $input . "<br>" . $date_stamp . "<br>" . $time_stamp . "</p>";
+    echo "<div class='post'>
+    <p><span class='message'>" . $input . "</span><br>" . $date_stamp . "<br>" . $time_stamp . "</p></div>";
 };
 
 

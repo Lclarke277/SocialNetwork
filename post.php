@@ -23,9 +23,6 @@ $receive_stmt->store_result();
 // SELECT (bind_result) FROM users...
 $receive_stmt->bind_result($post_id, $user_posting_id, $input, $date_stamp, $time_stamp);
 
-while($receive_stmt->fetch()) {
-    echo "<p>" . $input . "<br>" . $date_stamp . "<br>" . $time_stamp . "</p>";
-};
 
 
 $receive_stmt->close();

@@ -2,6 +2,9 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
+    background-image: url(../images/site/gradient.jpg);
+    background-repeat: no-repeat;
+    background-size: cover
 }
 
 #wrap {
@@ -19,12 +22,56 @@ body, html {
     height: 70px;
 }
 
+#user_search_form {
+    right: 10px;
+    top: 10px;
+    display: block;
+    position: absolute;
+    padding: 10px 20px;
+}
+
 div#profile_wrap {
     width: 200px;
     height: 200px;
-    margin: 0 auto;
-    position:inherit;
+    margin: 40px auto;
+    border: 1px solid white;
     background-image: url('../images/profile.jpg');
     background-size: cover;
     background-position: center;
+}
+
+div#left {
+    width: 300px;
+    position: absolute;
+    top: 70px;
+    bottom: 0;
+    background-color: #6A00A8;
+}
+
+div#right {
+    width: 700px;
+    position: absolute;
+    top: 70px;
+    bottom: 0;
+    left: 300px;
+    background-color: white;
+}
+
+div.post {
+    background-color: #9400EA;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+}
+
+span.message {
+    background-color: white;
+    display: block;
+    padding: 20px 10px;
+    min-width: 580px;
+    font-family: 'Roboto', sans-serif;
 }
