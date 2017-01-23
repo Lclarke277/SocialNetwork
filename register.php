@@ -39,7 +39,7 @@ if(filter_var($email, FILTER_VALIDATE_EMAIL))  {
 
         <script>
         var message = $('#error_message');
-        message.show().html('The email, $email already exists');
+        message.fadeIn(250).html('The email, $email already exists');
         message.delay(3000).fadeOut(1500);
         </script>    
 
@@ -56,7 +56,7 @@ _END;
         echo <<<_END
         <script>
         var message = $('#success_message');
-        message.show().html('You are registered $first_name, welcome.');
+        message.fadeIn(250).html('You are registered $first_name, welcome.');
         message.delay(3000).fadeOut(1500);
         $('#login_email').val('$email');
         $('#login_pass').val('$password_raw');
@@ -72,7 +72,7 @@ $stmt->close();
     
     <script>
     var message = $('#error_message');
-    message.show().html('The email, $email is invalid.<br> Please use a valid email.');
+    message.fadeIn(250).html('The email, $email is invalid.<br> Please use a valid email.');
     message.delay(3000).fadeOut(1000);
     </script>    
 

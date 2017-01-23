@@ -10,9 +10,11 @@
 </head>
 <body>
     
-    <div id='wrap'>
+    
 
         <div id="header">
+            
+            <div id='wrap'>
 
         <img id='logo' src="images/site/logo.png">
 
@@ -20,8 +22,9 @@
             <input id='login_email' type='text' name='email' maxlength='60' required='required' placeholder="Email">
             <input id='login_pass' type='password' name='password' maxlength='60' required='required' placeholder="Password">
             <input type='submit' name='login' value='Log In'>
-        </form>    
-        </div>
+        </form> 
+                
+            </div><!-- Wrap -->
 
         <div id='main_body'>
 
@@ -42,10 +45,9 @@
                 
             </div><!-- Register Wrap -->
 
+            </div><!-- Main Body -->
 
-
-        </div><!-- Main Body -->    
-    </div><!-- Wrap -->  
+        </div><!-- Header  -->      
     
 </body>         
 </html>

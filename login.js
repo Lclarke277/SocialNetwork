@@ -22,7 +22,6 @@ $(function() {
                     
                 // display the error message
                 } else {
-                 $('#error_message').removeClass('hidden');
                  jQuery(data).appendTo("#error_message");   
                 }
                 

@@ -1,36 +1,22 @@
-html, body {
+body, html {
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
-div#wrap {
+#wrap {
     width: 1000px;
-    margin: 0 auto;
-    padding: 0;
-    background-color: RGBa(200, 200, 200, 1);
-    height: 100vh;
+    height: 100%;
+    position: absolute;
+    display: block;
+    left: 50%;
+    margin-left: -500px;
 }
 
-div#header {
-    margin: 0;
-    padding: 0;
+#header {
     width: 100%;
-    background-color: RGBa(0, 0, 0, 0.5);
+    background-color: #9400EA;
     height: 70px;
-}
-
-div#left {
-    float:left;
-    margin: 0;
-    padding: 0;
-    width: 300px;
-    min-height: 95%;
-    background-color: RGBa(0, 0, 0, 0.3);
-}
-
-div#right {
-    float:left;
-    width: 700px;
 }
 
 div#profile_wrap {

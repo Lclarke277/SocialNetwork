@@ -59,19 +59,19 @@ if(isset($_FILES['image'])){
    }    
 ?>
 
-<div id='wrap'>
+
 
 <div id='header'>
-<h1>Your Logged In <?php echo $first_name . " " . $last_name ?>!</h1>
     
+<div id='wrap'>
     
 <!-- Search Other Users -->
 <form id='user_search_form' action="search_users.php" method="post">
     <input type='text' name='user_search' placeholder="Search Users">
     <input type='submit' name='user_search_submit' value='Search'>
 </form>
-</div><!-- Header -->
     
+
 <div id='left'>
     
 <!-- Profile Picture -->
@@ -103,7 +103,11 @@ if(isset($_FILES['image'])){
     
     </div>
     
-</div><!-- Right -->  
-</div><!-- Wrap -->    
+</div><!-- Right --> 
+    
+</div><!-- Wrap --> 
+
+</div><!-- Header -->
+    
 </body>         
 </html>
