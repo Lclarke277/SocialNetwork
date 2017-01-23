@@ -63,6 +63,11 @@ input[type=submit] {
     color: white;
     border: 1px solid white;
     padding: 2px 5px;
+    padding-bottom: 4px;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
 }
 
 input[type=submit]:hover {
@@ -80,8 +85,32 @@ h2#register {
 input.register {
     margin-top: 10px;
     display: block;
-    width: 100%;
-    padding: 3px 0px;
+    width: 290px;
+    padding: 3px 5px;
+}
+
+input#register_submit {
+    margin-top: 10px;
+    display: block;
+    width: 300px;
+    padding: 3px 5px;
+}
+
+#register_message, #login_message {
+    padding: 10px 0px;
+    width: 300px;
+    position: absolute;
+    top: 75px;
+    left: 50%;
+    margin-left: -160px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    text-align: center;
+    color: white;
+    background-color: #9400EA;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
 }
 
 #register_wrap {
@@ -89,8 +118,15 @@ input.register {
     background-color: #9400EA;
     position: absolute;
     left: 50%;
-    margin-left: -170px;
+    margin-left: -200px;
     top: 150px;
-    padding: 20px;
-    padding-top: -20px;
+    padding: 20px 50px;
+    /* Box Shadow */
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+}
+
+.hidden {
+    display: none;
 }

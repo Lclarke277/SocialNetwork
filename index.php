@@ -27,7 +27,7 @@
 
         <div id='main_body'>
 
-            <span id='register_message'></span>    
+            <span id='register_message' class='hidden'></span>    
 
             <div id='register_wrap'>
 
@@ -38,7 +38,7 @@
                 <input class='register' type='text' name='last_name' maxlength='30' required='required' placeholder="Last Name">
                 <input class='register' id='email_register' type='text' name='email' maxlength='60' required='required' placeholder="Email"><span id='email_exists'></span>
                 <input class='register' type='password' name='password' maxlength='60' required='required' placeholder="Password">
-                <input class='register' type='submit' id='register_user' name='register' value='Register'>
+                <input id='register_submit' type='submit' id='register_user' name='register' value='Register'>
             </form>
                 
             </div><!-- Register Wrap -->
