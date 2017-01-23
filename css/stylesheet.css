@@ -47,7 +47,7 @@ input[type=text], input[type=password] {
     margin-right: 5px;
     padding: 3px 5px;
     border-radius: 0px;
-    border: none;
+    border: solid 1px #939393;
     border-bottom: 3px solid white;
     -moz-transition: all .2s ease-in;
     -o-transition: all .2s ease-in;
@@ -56,7 +56,7 @@ input[type=text], input[type=password] {
 }
 
 input[type=text]:focus, input[type=password]:focus {
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid #42DB3F;
 }
 
 input[type=submit] {
@@ -115,7 +115,7 @@ input#register_submit {
 }
 
 #success_message {
-    background-color: green; /* #9400EA; */
+    background-color: #288C27; /* #9400EA; */
 }
 
 #error_message {
@@ -130,6 +130,7 @@ input#register_submit {
     margin-left: -250px;
     top: 150px;
     padding: 20px 100px;
+    border-radius: 3px;
     /* Box Shadow */
     -webkit-box-shadow: 0 10px 6px -6px #777;
     -moz-box-shadow: 0 10px 6px -6px #777;

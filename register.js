@@ -12,7 +12,7 @@ $(function() {
             
             // On Success, Append Data From register.php
             success: function(data) {
-                $('#register_message').removeClass('hidden');
+                $('#success_message').removeClass('hidden');
                 jQuery(data).appendTo("#success_message");
             }
         });
