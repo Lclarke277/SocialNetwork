@@ -117,12 +117,16 @@ div.post {
     box-shadow: 0 10px 6px -6px #777;
 }
 
+.post_image {
+    width: 75px;
+}
+
 span.message {
     background-color: white;
     border-radius: 3px;
     display: block;
     padding: 20px 10px;
-    min-width: 580px;
+    max-width: 500px;
     font-family: 'Roboto', sans-serif;
 }
 

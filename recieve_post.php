@@ -19,7 +19,9 @@ $receive_stmt->bind_result($post_id, $user_posting_id, $input, $date_stamp, $tim
 while($receive_stmt->fetch()) {
     echo "<div class='post'>
     
-    <p><span class='datetime'>" . $time_stamp . "<br>" . $date_stamp . "</span><span class='message'>" . $input . "</span></p></div>";
+    <p><span class='datetime'>" . $time_stamp . "<br>" . $date_stamp . "</span>
+    <img class='post_image' src='images/$post_id/profile.jpg'>
+    <span class='message'>" . $input . "</span></p></div>";
 };
 
 
