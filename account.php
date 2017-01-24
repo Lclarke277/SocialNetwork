@@ -65,6 +65,8 @@ if(isset($_FILES['image'])){
 <div id='header'>
     
 <div id='wrap'>
+
+<img id='logo' src="images/site/logo.png">
     
 <!-- Search Other Users -->
 <form id='user_search_form' action="search_users.php" method="post">
