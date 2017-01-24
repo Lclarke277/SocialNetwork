@@ -66,6 +66,21 @@ div#right {
     overflow-y: scroll;
 }
 
+div#search_area {
+    width: 640px;
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: grey;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+}
+
 div.post {
     background-color: #9400EA;
     width: 600px;
@@ -83,6 +98,15 @@ span.message {
     display: block;
     padding: 20px 10px;
     min-width: 580px;
+    font-family: 'Roboto', sans-serif;
+}
+
+span.datetime {
+    display: block;
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-size: 10px;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -135,4 +159,8 @@ input[type=submit]:hover {
 
 input[name=post] {
     width: 75px;
+}
+
+.hidden {
+    display: none;
 }

@@ -93,6 +93,9 @@ if(isset($_FILES['image'])){
 </div><!-- Left -->  
     
 <div id='right'>
+    
+<!-- Put search results in here -->
+    <div id='search_area' class='hidden'></div>
    
 <div class='post'>
     <!-- Status Posting Form -->
@@ -101,9 +104,6 @@ if(isset($_FILES['image'])){
         <input type='submit' name='post' value='Post'>
     </form>
 </div>  
-    
-    <!-- Put search results in here -->
-    <div id='search_area'></div>
     
     <div id='post_area'>
     

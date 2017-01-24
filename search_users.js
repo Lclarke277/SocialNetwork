@@ -14,8 +14,19 @@ $(function() {
             success: function(data) {
                 
                 // display the error message
+                $("#search_area").removeClass('hidden');
                 $("#search_area").html(data);
-                // jQuery(data).appendTo("#post_area");   
+                
+                // If you click on the body, close the pop-up
+                $(document.body).click(function() {
+                    $('#search_area').addClass('hidden');
+                });
+                
+                // Below prevents window from cosing if the clicked area
+                // is apart of the search div
+                $('#search_area').click(function(e) {
+                    e.stopPropagation();
+               });   
             }
          });
         // Clear the form fields after submit
