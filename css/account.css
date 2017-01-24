@@ -67,18 +67,43 @@ div#right {
 }
 
 div#search_area {
-    width: 640px;
+    width: 500px;
     max-height: 300px;
     overflow-y: auto;
+    overflow-x: hidden;
     background-color: grey;
     position: absolute;
     top: 0;
-    left: 20px;
+    left: 100px;
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px;
     -webkit-box-shadow: 0 10px 6px -6px #777;
     -moz-box-shadow: 0 10px 6px -6px #777;
     box-shadow: 0 10px 6px -6px #777;
+}
+
+.search_image {
+    width: 100px;
+    padding: 10px 0px 10px 20px;
+    float: left;
+}
+
+.search_wrap {
+    display: block;
+    width: 500px;
+    height: 120px;
+}
+
+.search_bio {
+    float: left;
+    width: 320px;
+    height: 100px;
+    padding: 0px 10px 20px 20px;
+}
+
+h3.search, p.search {
+    color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
 div.post {
