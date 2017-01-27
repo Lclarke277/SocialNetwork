@@ -31,7 +31,7 @@ body, html {
 }
 
 #user_search_form {
-    right: 10px;
+    right: 200px;
     top: 10px;
     display: block;
     position: absolute;
@@ -118,7 +118,14 @@ div.post {
 }
 
 .post_image {
-    width: 75px;
+    width: 60px;
+    border: 1px solid white;
+}
+
+.post_name {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    size: 25px;
 }
 
 span.message {
@@ -126,17 +133,32 @@ span.message {
     border-radius: 3px;
     display: block;
     padding: 20px 10px;
-    max-width: 500px;
+    max-width: 575px;
+    min-width: 575px;
     font-family: 'Roboto', sans-serif;
 }
 
 span.datetime {
-    display: block;
+    text-align: left;
     padding: 0;
     margin: 0;
     color: white;
     font-size: 10px;
     font-family: 'Roboto', sans-serif;
+}
+
+.post_details {
+    width: 530px;
+    float: right;
+    margin-top: -20px;
+}
+
+#shadow {
+    position: absolute;
+    top: 70px;
+    left: 300px;
+    width: 683px;
+    z-index: 100;
 }
 
 input[name=input] {

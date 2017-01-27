@@ -73,8 +73,10 @@ if(isset($_FILES['image'])){
     <input type='text' name='user_search' placeholder="Search Users">
     <input type='submit' name='user_search_submit' value='Search'>
 </form>
+ 
+<!--Shadow for the Post Area -->    
+<img id='shadow' src="images/site/shadow.png">
     
-
 <div id='left'>
     
 <!-- Profile Picture -->
